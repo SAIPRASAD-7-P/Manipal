@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-27T14:11:54 IST" name="Default suite" finished-at="2024-02-27T14:11:59 IST" duration-ms="5003">
+  <suite started-at="2024-02-28T11:57:38 IST" name="Default suite" finished-at="2024-02-28T11:57:44 IST" duration-ms="5315">
     <groups>
     </groups>
-    <test started-at="2024-02-27T14:11:54 IST" name="Default test" finished-at="2024-02-27T14:11:59 IST" duration-ms="5003">
-      <class name="Axis.DataDriven.ReadExcel">
-        <test-method signature="fblogin()[pri:0, instance:Axis.DataDriven.ReadExcel@201a4587]" started-at="2024-02-27T14:11:54 IST" name="fblogin" finished-at="2024-02-27T14:11:59 IST" duration-ms="4946" status="PASS">
+    <test started-at="2024-02-28T11:57:38 IST" name="Default test" finished-at="2024-02-28T11:57:44 IST" duration-ms="5315">
+      <class name="Axis.DataDriven.WriteToExcel">
+        <test-method signature="fblogin()[pri:0, instance:Axis.DataDriven.WriteToExcel@201a4587]" started-at="2024-02-28T11:57:38 IST" name="fblogin" finished-at="2024-02-28T11:57:44 IST" duration-ms="5262" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fblogin -->
-      </class> <!-- Axis.DataDriven.ReadExcel -->
+      </class> <!-- Axis.DataDriven.WriteToExcel -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

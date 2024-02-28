@@ -2,7 +2,7 @@ package Axis.DataDriven;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+//import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -24,16 +24,13 @@ public class ReadExcel {
 	@SuppressWarnings("deprecation")
 	@Test
 	public void fblogin() throws IOException {
-		
 		System.setProperty("Webdriver.chrome.driver",
 		"C:\\Users\\HP\\Documents\\Manipal\\chromedriver-win64\\chromedriver.exe");
 
 		WebDriver driver = new ChromeDriver();
 	    driver.get("https://www.facebook.com/");
-		
-	    driver.manage().window().maximize();
+		driver.manage().window().maximize();
 	    
-	    //driver.manage().timeouts().implicitlyWait(20,TimeUnit,MILLISECONDS);
 	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.MILLISECONDS);
 	    
 	    // Import excel sheet
@@ -41,11 +38,9 @@ public class ReadExcel {
 	    File src = new File("C:\\Users\\HP\\eclipse-workspace\\DataDriven\\TestData.xlsx");
 	    
 	    //load the file
-	    
 	    FileInputStream fis = new FileInputStream(src);
 	    
 	    // load the work book
-	    
 	    workbook = new XSSFWorkbook(fis);
 	    
 	    // access the sheet from the workbook
@@ -54,18 +49,14 @@ public class ReadExcel {
 	    
 	    for(int i=1; i<=sheet.getLastRowNum(); i++) {
 	    	
-	    	// import the data from email;
-	    	
+	    	//Import the data from email;
 	    	cell = sheet.getRow(i).getCell(1);
 	    
 	    	driver.findElement(By.xpath("//input[@name='email']")).clear();
-	    	
 	    	driver.findElement(By.xpath("//input[@name='email']")).sendKeys(cell.getStringCellValue());
 
             // import the data from password
-	    	
 	    	driver.findElement(By.xpath("//input[@id='pass']")).clear();
-	    	
 	    	driver.findElement(By.xpath("//input[@id='pass']")).sendKeys(cell.getStringCellValue());
 	    
 	    }
